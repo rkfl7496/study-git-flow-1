@@ -22,8 +22,8 @@
         overflow: hidden;
       }
       .numset {
-          text-align: center;
-          padding: 10px;
+        text-align: center;
+        padding: 10px;
       }
     </style>
   </head>
@@ -53,14 +53,15 @@
       }
       // TODO 로또 번호(.number) html 생성 함수 작성 [feature/script]
       function genLottoHTML() {
-        var numbers = getLuckyNumber();
         var lottoHTML = "";
-        lottoHTML += '<div class="numset"><span class="number">';
-        lottoHTML += numbers.join('</span> <span class="number">');
-        lottoHTML += "</span></div>";
+        for (var i = 0; i < 5; i++) {
+          var numbers = getLuckyNumber();
+          lottoHTML += '<div class="numset"><span class="number">';
+          lottoHTML += numbers.join('</span> <span class="number">');
+          lottoHTML += "</span></div>";
+        }
         LOTTO.innerHTML = lottoHTML;
       }
-      
     </script>
   </body>
 </html>
