@@ -1,38 +1,11 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
-      <head>
-          <!-- ... 생략 ... -->
-          <title>Lotto</title>
-      <!-- TODO 추첨 번호(.number) 스타일 작성 [feature/style]-->
-      </head>
-      <body>
-          <!-- ... 생략 ... -->
-          <button onclick="genLottoHTML()">생성하기</button>
-          <!-- ... 생략 ... -->
-      <script>
-      // ... 생략 ...
-      // 로또 번호 추첨 함수 
-      function getLuckyNumber(){
-          var numbers = [];
-          while( numbers.length < 6 ) {
-              var newNumber = genLottoNo();
-              if( numbers.indexOf(newNumber)<0 ) { // 중복검사
-                  numbers.push(newNumber);
-              }
-          }
-          return numbers;
-      }
-      // TODO 로또 번호(.number) html 생성 함수 작성 [feature/script]
-      function genLottoHTML(){
-          var lottoHTML = numbers.join(" ");
-          LOTTO.innerHTML = lottoHTML;
-      }
-      </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Lotto</title>
+    <!-- TO-DO 추첨번호(.number) 스타일 작성 [featrue/style]-->
   </head>
   <body>
     <h1>로또번호 추첨기</h1>
